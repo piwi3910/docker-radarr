@@ -46,7 +46,7 @@ RUN adduser -u 666 -D -h /radarr -s /bin/bash radarr radarr && \
 #
 VOLUME ["/datadir", "/downloads"]
 
-EXPOSE 8080
+EXPOSE 7878
 
 #
 # Start radarr.
