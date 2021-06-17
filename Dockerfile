@@ -21,13 +21,13 @@ ARG RADARR_VERSION=DEFAULT
 #
 # Add (download) radarr
 #
-ADD https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux.tar.gz /tmp/sonarr.tar.gz
+ADD https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux.tar.gz /tmp/radarr.tar.gz
 
 
 #
 # Install sonarr and requied dependencies
 #
-RUN adduser -u 666 -D -h /radarr -s /bin/bash rdarr radarr && \
+RUN adduser -u 666 -D -h /radarr -s /bin/bash radarr radarr && \
     chmod 755 /radarr.sh && \
     tar xzf /tmp/radarr.tar.gz -C /tmp && \
     mv /tmp/Radarr/* /radarr/ && \
