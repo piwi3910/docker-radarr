@@ -5,9 +5,9 @@ set -e
 # Display settings on standard out.
 #
 
-USER="RADARR"
+USER="radarr"
 
-echo "RADARR settings"
+echo "radarr settings"
 echo "================"
 echo
 echo "  User:       ${USER}"
