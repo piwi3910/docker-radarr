@@ -32,7 +32,7 @@ RUN adduser -u 666 -D -h /radarr -s /bin/bash radarr radarr && \
     tar xzf /tmp/radarr.tar.gz -C /tmp && \
     mv /tmp/Radarr/* /radarr/ && \
     apk update && \
-	apk add --no-cache libmediainfo ca-certificates && \
+	apk add --no-cache libmediainfo ca-certificates shadow && \
     apk add mono --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
 	update-ca-certificates && \
     chown -R radarr: radarr && \
