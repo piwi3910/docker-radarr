@@ -32,9 +32,11 @@ RUN adduser -u 666 -D -h /radarr -s /bin/bash radarr radarr && \
     tar xzf /tmp/radarr.tar.gz -C /tmp && \
     mv /tmp/Radarr/* /radarr/ && \
     apk update && \
-	apk add --no-cache libmediainfo ca-certificates shadow && \
-    apk add mono --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
-	update-ca-certificates && \
+	apk add --no-cache wget ca-certificates shadow icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib && \
+    apk add libgdiplus --repository https://dl-3.alpinelinux.org/alpine/edge/testing/ && \
+    cd /tmp && wget https://dot.net/v1/dotnet-install.sh && chmod +x dotnet-install.sh && \
+    ./dotnet-install.sh -c Current --runtime aspnetcore && \
+    update-ca-certificates && \
     chown -R radarr: radarr && \
     rm -rf /tmp/Rad* /tmp/rad* && \
     mkdir -p /downloads && \
