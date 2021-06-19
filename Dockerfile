@@ -37,7 +37,7 @@ RUN adduser -u 666 -D -h /radarr -s /bin/bash radarr radarr && \
     cd /tmp && wget https://dot.net/v1/dotnet-install.sh && chmod +x dotnet-install.sh && \
     ./dotnet-install.sh -c Current --runtime aspnetcore && \
     update-ca-certificates && \
-    chown -R radarr: radarr && \
+    chown -R radarr: /radarr && \
     rm -rf /tmp/Rad* /tmp/rad* && \
     mkdir -p /downloads && \
     mkdir -p /media
