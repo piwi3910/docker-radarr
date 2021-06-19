@@ -21,7 +21,7 @@ ARG RADARR_VERSION=DEFAULT
 #
 # Add (download) radarr
 #
-ADD https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux-core-arm64.tar.gz-core-arm64.tar.gz /tmp/radarr.tar.gz
+ADD https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux-core-arm64.tar.gz /tmp/radarr.tar.gz
 
 
 #
