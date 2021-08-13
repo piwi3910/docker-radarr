@@ -16,12 +16,12 @@ ENV LANG C.UTF-8
 #
 # Specify versions of software to install.
 #
-ARG RADARR_VERSION=DEFAULT
+ARG VERSION=DEFAULT
 
 #
 # Add (download) radarr
 #
-ADD https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux.tar.gz /tmp/radarr.tar.gz
+ADD https://github.com/Radarr/Radarr/releases/download/v${VERSION}/Radarr.master.${VERSION}.linux.tar.gz /tmp/radarr.tar.gz
 
 
 #
